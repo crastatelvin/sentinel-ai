@@ -122,7 +122,7 @@ Throughout this pipeline, every step broadcasts live status updates to the front
 │        │          │  AIBriefing    │ RemediationPanel      │ │
 │        │          │  AttackChain                           │ │
 │        │          └────────────────────────────────────────┘ │
-└────────┼──────────────────────────┬───────────────────────────┘
+└────────┼──────────────────────────┬──────────────────────────┘
          │  POST /upload            │  WebSocket /ws
          │  GET /threats            │  (live pipeline events)
          │  GET /chains             │
@@ -130,35 +130,35 @@ Throughout this pipeline, every step broadcasts live status updates to the front
          │  GET /map-data           │
 ┌────────▼──────────────────────────▼───────────────────────────┐
 │                  FastAPI Backend (main.py)                    │
-│                                                              │
-│  ┌─────────────────┐  ┌──────────────────────────────────┐  │
-│  │  log_parser.py  │  │       threat_detector.py         │  │
-│  │  Auto-detect:   │  │  7 pattern libs · regex match    │  │
-│  │  Apache/Nginx/  │  │  Severity scoring · confidence   │  │
-│  │  Auth/CSV       │  └──────────────────────────────────┘  │
-│  └─────────────────┘                                        │
-│                                                              │
-│  ┌──────────────────────┐  ┌───────────────────────────┐   │
-│  │  threat_enricher.py  │  │     attack_chain.py       │   │
-│  │  httpx async geo-    │  │  Group by IP · detect     │   │
-│  │  location · ip-api   │  │  escalation patterns      │   │
-│  └──────────────────────┘  └───────────────────────────┘   │
-│                                                              │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │               gemini_service.py                       │  │
-│  │   analyze_threats() → 4-section structured report     │  │
-│  │   predict_next_attack() → rule-based prediction       │  │
-│  │   parse_ai_response() → structured dict parser        │  │
-│  └───────────────────────────────────────────────────────┘  │
-│                                                              │
-│  ┌────────────────┐  ┌──────────────┐  ┌────────────────┐  │
-│  │  models.py     │  │  auth.py     │  │  database.py   │  │
-│  │  User/Threat/  │  │  JWT · bcrypt│  │  SQLite via    │  │
-│  │  Analysis ORM  │  │  OAuth2      │  │  SQLAlchemy    │  │
-│  └───────┬────────┘  └──────────────┘  └───────┬────────┘  │
-│          └──────────── SQLAlchemy ORM ──────────┘           │
-│                        sentinel.db                          │
-└──────────────────────────────────────────────────────────────┘
+│                                                               │
+│  ┌─────────────────┐  ┌──────────────────────────────────┐    │
+│  │  log_parser.py  │  │       threat_detector.py         │    │
+│  │  Auto-detect:   │  │  7 pattern libs · regex match    │    │
+│  │  Apache/Nginx/  │  │  Severity scoring · confidence   │    │
+│  │  Auth/CSV       │  └──────────────────────────────────┘    │
+│  └─────────────────┘                                          │
+│                                                               │
+│  ┌──────────────────────┐  ┌───────────────────────────┐      │
+│  │  threat_enricher.py  │  │     attack_chain.py       │      │
+│  │  httpx async geo-    │  │  Group by IP · detect     │      │
+│  │  location · ip-api   │  │  escalation patterns      │      │
+│  └──────────────────────┘  └───────────────────────────┘      │
+│                                                               │
+│  ┌───────────────────────────────────────────────────────┐    │
+│  │               gemini_service.py                       │    │
+│  │   analyze_threats() → 4-section structured report     │    │
+│  │   predict_next_attack() → rule-based prediction       │    │
+│  │   parse_ai_response() → structured dict parser        │    │
+│  └───────────────────────────────────────────────────────┘    │
+│                                                               │
+│  ┌────────────────┐  ┌──────────────┐  ┌────────────────┐     │
+│  │  models.py     │  │  auth.py     │  │  database.py   │     │
+│  │  User/Threat/  │  │  JWT · bcrypt│  │  SQLite via    │     │
+│  │  Analysis ORM  │  │  OAuth2      │  │  SQLAlchemy    │     │
+│  └───────┬────────┘  └──────────────┘  └───────┬────────┘     │ 
+│          └──────────── SQLAlchemy ORM ──────────┘             │
+│                        sentinel.db                            │
+└────────────────────────────────────────────────────────────── ┘
 ```
 
 ---
