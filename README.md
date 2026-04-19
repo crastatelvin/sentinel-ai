@@ -72,6 +72,9 @@ Throughout this pipeline, every step broadcasts live status updates to the front
 <img width="930" height="434" alt="{D9C28621-1A5C-4CC9-8514-8A50633166A6}" src="https://github.com/user-attachments/assets/581d6651-b4b5-4920-ab52-79049ec9a722" />
 <br/>
 <br/>
+<img width="1362" height="636" alt="{68634D08-EEA5-468C-B8D6-943D1FFD1B9D}" src="https://github.com/user-attachments/assets/6b78f2fb-1861-4e91-9ec2-d0b46596f513" />
+<br/>
+<br/>
 <img width="929" height="434" alt="{440F9229-34A9-4364-A768-8B502D624109}" src="https://github.com/user-attachments/assets/0b497439-b595-485e-9333-03467c70f74e" />
 <br/>
 <br/>
