@@ -1,0 +1,10 @@
+Dec 10 04:23:11 server sshd[1234]: Failed password for root from 192.168.1.105 port 22 ssh2
+Dec 10 04:23:12 server sshd[1234]: Failed password for admin from 192.168.1.105 port 22 ssh2
+Dec 10 04:23:13 server sshd[1234]: Invalid user postgres from 45.33.32.156 port 22 ssh2
+Dec 10 04:23:14 server sshd[1234]: Failed password for root from 45.33.32.156 port 22 ssh2
+Dec 10 04:23:15 server sshd[1234]: BREAK-IN ATTEMPT! Invalid user from 45.33.32.156
+Dec 10 04:23:16 server sshd[1234]: authentication failure from 91.108.4.3 port 22
+Dec 10 04:23:17 server sshd[1234]: Failed password for ubuntu from 91.108.4.3 port 22 ssh2
+Dec 10 04:23:18 server sshd[1234]: Failed password for root from 91.108.4.3 port 22 ssh2
+Dec 10 04:24:01 server sshd[1234]: Accepted password for deploy from 10.0.0.5 port 22 ssh2
+Dec 10 04:25:11 server sshd[1234]: Failed password for root from 185.220.101.45 port 22 ssh2

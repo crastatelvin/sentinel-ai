@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pandas
+python-multipart
+google-genai
+python-dotenv
+httpx
+websockets
+passlib[bcrypt]
+python-jose[cryptography]
+sqlalchemy
