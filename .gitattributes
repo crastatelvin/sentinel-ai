@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Language stats: headline this repo as Python (the FastAPI backend
+# that does the log parsing, threat classification, and Gemini
+# analysis). The React dashboard is a consumer of the API — valuable,
+# but not the repo's core identity. Marking it vendored tells GitHub's
+# Linguist to attribute the primary language to the backend.
+frontend/** linguist-vendored
