@@ -470,20 +470,12 @@ VITE_WS_URL=ws://localhost:8000/ws
 
 ---
 
-## 📜 License
+## License
 
-Licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
-
----
-
-<div align="center">
+This project is licensed under the MIT License. See [LICENSE](./LICENSE).
 
 Made with ❤️ by [Crasta Telvin](https://github.com/crastatelvin)
 
 ⭐ Star this repo if you find it useful!
 
 </div>
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](./LICENSE).
